@@ -1,6 +1,6 @@
-package Dropdown;
+package dropdown;
 
-import Base.BaseTests;
+import base.BaseTests;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;

@@ -1,9 +1,8 @@
-package ForgotPassword;
+package forgotPassword;
 
-import Base.BaseTests;
+import base.BaseTests;
 import org.testng.annotations.Test;
 import pages.EmailSentPage;
-import pages.SecureAreaPage;
 
 import static org.testng.Assert.*;
 
@@ -15,6 +14,4 @@ public class ForgotPasswordTests extends BaseTests {
                 .clickRetrieveButton();
         assertTrue(emailSentPage.getAlertText().contains("Your e-mail's been sent!"));
     }
-
-
 }
