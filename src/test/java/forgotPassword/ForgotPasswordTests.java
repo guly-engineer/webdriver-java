@@ -4,11 +4,11 @@ import base.BaseTests;
 import org.testng.annotations.Test;
 import pages.EmailSentPage;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertTrue;
 
 public class ForgotPasswordTests extends BaseTests {
     @Test
-    public void testVerifyEmailSent(){
+    public void testVerifyEmailSent() {
         EmailSentPage emailSentPage = homePage.clickForgotPassword()
                 .setEmailField("tau@example.com")
                 .clickRetrieveButton();

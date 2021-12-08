@@ -12,20 +12,21 @@ public class BaseTests {
     protected HomePage homePage;
 
     @BeforeClass
-    public void setUp(){
-        System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
-        driver=new ChromeDriver();
+    public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
-        homePage=new HomePage(driver);
-       // driver.manage().window().maximize();
+        homePage = new HomePage(driver);
+        // driver.manage().window().maximize();
 //        driver.manage().window().setSize(new Dimension(375,812));
 //        driver.findElement(By.linkText("Shifting Content")).click();
 //        driver.findElement(By.linkText("Example 1: Menu Element")).click();
 //        List<WebElement> menuItems=driver.findElements(By.tagName("li"));
 //        System.out.println("Number of menu items: "+menuItems.size());
     }
+
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 

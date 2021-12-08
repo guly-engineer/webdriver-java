@@ -11,7 +11,8 @@ public class EmailSentPage {
     public EmailSentPage(WebDriver driver) {
         this.driver = driver;
     }
-    public String getAlertText(){
+
+    public String getAlertText() {
         return driver.findElement(statusAlert).getText();
     }
 

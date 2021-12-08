@@ -5,28 +5,49 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage {
 
-    private  WebDriver driver;
+    private WebDriver driver;
 
     public HomePage(WebDriver driver) {
-        this.driver=driver;
+        this.driver = driver;
     }
 
-    public LoginPage clickAuthenticationLink(){
+    public LoginPage clickAuthenticationLink() {
         clickLink("Form Authentication");
         return new LoginPage(driver);
     }
-    public DropDownPage clickDropDown(){
+
+    public DropDownPage clickDropDown() {
         clickLink("dropdown");
         return new DropDownPage(driver);
     }
-    public ForgotPasswordPage clickForgotPassword(){
+
+    public ForgotPasswordPage clickForgotPassword() {
         clickLink("Forgot Password");
         return new ForgotPasswordPage(driver);
     }
-    private void clickLink(String linkText){
+
+    public HorizontalSliderPage clickHorizontalSlider() {
+        clickLink("Horizontal Slider");
+        return new HorizontalSliderPage(driver);
+    }
+
+    public JavaScriptAlertsPage clickJavaScriptAlerts() {
+        clickLink("JavaScript Alerts");
+        return new JavaScriptAlertsPage(driver);
+    }
+
+    public FramesPage clickFrames() {
+        clickLink("Frames");
+        return new FramesPage(driver);
+    }
+
+    public ContextMenuPage clickContextMenu() {
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
+    private void clickLink(String linkText) {
         driver.findElement(By.linkText(linkText)).click();
-
-
     }
 
 }
