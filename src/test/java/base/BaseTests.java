@@ -33,7 +33,6 @@ public class BaseTests {
         driver = new EventFiringDecorator(listener).decorate(new ChromeDriver());
         goHome();
 
-
         //driver.manage().window().maximize();
 //        driver.manage().window().setSize(new Dimension(375,812));
 //        driver.findElement(By.linkText("Shifting Content")).click();
