@@ -5,9 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class NestedFramesPage {
     private WebDriver driver;
-    private String topFrame = "frame-top";
-    private String leftFrame = "frame-left";
-    private String bottomFrame = "frame-bottom";
     private By body = By.tagName("body");
 
     public NestedFramesPage(WebDriver driver) {
@@ -15,6 +12,8 @@ public class NestedFramesPage {
     }
 
     public String getLeftFrameText() {
+        String topFrame = "frame-top";
+        String leftFrame = "frame-left";
         driver.switchTo().frame(topFrame).switchTo().frame(leftFrame);
         String text = getFrameText();
         driver.switchTo().parentFrame();
@@ -23,6 +22,7 @@ public class NestedFramesPage {
     }
 
     public String getBottomFrameText() {
+        String bottomFrame = "frame-bottom";
         driver.switchTo().frame(bottomFrame);
         String text = getFrameText();
         driver.switchTo().parentFrame();

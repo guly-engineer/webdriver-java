@@ -17,7 +17,7 @@ public class HomePage {
     }
 
     public DropDownPage clickDropDown() {
-        clickLink("dropdown");
+        clickLink("Dropdown");
         return new DropDownPage(driver);
     }
 
@@ -44,6 +44,11 @@ public class HomePage {
     public ContextMenuPage clickContextMenu() {
         clickLink("Context Menu");
         return new ContextMenuPage(driver);
+    }
+
+    public DynamicLoadingPage clickDynamicLoading() {
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
     }
 
     private void clickLink(String linkText) {
